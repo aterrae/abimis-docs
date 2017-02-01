@@ -1,0 +1,60 @@
+{
+    "projectName":"Abimis by Aterrae",
+    "topics": [
+      {
+        "title": "Foundations",
+        "items": [
+          {
+            "name": "Grid",
+            "page": "grid"
+          },
+          {
+            "name": "Utilities",
+            "page": "utils"
+          },
+          {
+            "name": "Typography",
+            "page": "typography"
+          }
+        ]
+      },
+      {
+        "title": "Simple Components",
+        "items": [
+          {
+            "name": "Button",
+            "page": "button"
+          },
+          {
+            "name": "Breadcrumb",
+            "page": "breadcrumb"
+          },
+          {
+            "name": "Form",
+            "page": "form"
+          },
+          {
+            "name": "Progress",
+            "page": "progress"
+          },
+          {
+            "name": "Table",
+            "page": "table"
+          }
+        ]
+      },
+      {
+        "title": "Complex Components",
+        "items": [
+          {
+            "name": "Alert",
+            "page": "alert"
+          },
+          {
+            "name": "Card",
+            "page": "card"
+          }
+        ]
+      }
+    ]
+}

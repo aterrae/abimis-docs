@@ -1,0 +1,39 @@
+.sidenav {
+    padding: 32px;
+    background: $white;
+
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: $topnav-height;
+        border-right: 1px solid $smoke;
+        z-index: 0;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        color: $smoke;
+    }
+
+    &__title {
+        color: $coal;
+        text-transform: uppercase;
+        border-bottom: 1px solid $smoke;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+    }
+
+    &__item {
+        &--active {
+            text-decoration: underline;
+        }
+    }
+}

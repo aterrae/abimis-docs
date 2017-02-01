@@ -1,0 +1,13 @@
+<aside class="grid__cell phone-up-1of1 lap-up-1of4 desk-1of5 sidenav__container">
+    <div class="sidenav">
+        <h3>Contents</h3>
+        <ul class="sidenav__list">
+            {{#each strings.topics}}
+                <li class="sidenav__title">{{this.title}}</li>
+                {{#each this.items}}
+                    <li><a href="{{this.page}}.html">{{this.name}}</a></li>
+                {{/each}}
+            {{/each}}
+        </ul>
+    </div>
+</aside>

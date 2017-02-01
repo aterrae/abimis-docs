@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'abimis';
+
+@import 'docs/sidenav';
+@import 'docs/body';
+@import 'docs/test';
+
+body {
+    font-family: Roboto;
+}
+
+> h1 {
+    font-weight: 900;
+    font-size: 6rem;
+}
+
+.docs {
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+
+        &__title {
+            margin-bottom: 0;
+            margin-left: 16px;
+            font-weight: 700;
+            color: $white;
+        }
+    }
+}

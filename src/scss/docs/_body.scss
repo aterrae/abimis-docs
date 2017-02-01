@@ -1,0 +1,24 @@
+.body {
+    padding: 48px;
+
+    > h2 {
+        color: $primary-color;
+        font-weight: 700;
+        border-bottom: 1px solid $fog;
+        padding-bottom: 16px;
+        margin-bottom: 48px;
+
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+    }
+
+    > h5 {
+        color: $secondary-color;
+        font-weight: 500;
+    }
+
+    > pre {
+        margin-top: 64px;
+    }
+}

@@ -1,0 +1,368 @@
+<!doctype html>
+
+<html class="no-js" lang="it">
+
+<!--
+   _____   ___.    .__          .__
+  /  _  \  \_ |__  |__|  _____  |__|  ______
+ /  /_\  \  | __ \ |  | /     \ |  | /  ___/
+/    |    \ | \_\ \|  ||  Y Y  \|  | \___ \
+\____|__  / |___  /|__||__|_|  /|__|/____  >
+\/      \/           \/          \/ 
+Copyright © 2017 Aterrae | Digital Growth.
+-->
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>{{strings.projectName}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css"/>
+<link rel="stylesheet" href="../bower_components/highlight/src/styles/default.css">
+
+    <meta name="application-name" content="Abimis by Aterrae">
+    <meta name="author" content="Aterrae | Digital Growth"/>
+    <meta name="description" content="Now you're coding with power"/>
+    <meta name="keywords" content="abimis, aterrae, websites, front-end, framework"/>
+
+    <meta property="og:url" content="http://aterrae.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Abimis by Aterrae">
+    <meta property="og:image" content="http://aterrae.com/image.jpg">
+    <meta property="og:description" content="Now you're coding with power">
+    <meta property="og:site_name" content="Aterrae">
+    <meta property="og:locale" content="it_IT">
+    <meta property="article:author" content="Aterrae | Digital Growth">
+
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="http://aterrae.com">
+    <meta name="twitter:title" content="Abimis by Aterrae">
+    <meta name="twitter:description" content="Now you're coding with power">
+    <meta property="twitter:image" content="">
+
+    <link href="https://plus.google.com/+YourPage" rel="publisher">
+    <meta itemprop="name" content="Abimis by Aterrae">
+    <meta itemprop="description" content="Now you're coding with power">
+    <meta itemprop="image" content="http://aterrae.com/assets/img/logo.png">
+
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes="192x192">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Abimis">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
+</head>
+
+<body>
+    <nav class="topnav docs__nav">
+        <img class="topnav__logo margin-left" src="./assets/img/solid-black.png" alt="logo">
+        <h3 class="docs__nav__title">Abimis</h3>
+    </nav>
+    <div class="grid">
+        {{> sidenav}}
+
+        <div class="grid__cell phone-up-1of1 lap-up-3of4 desk-3of5 push--desk-1of5">
+            <div class="body">
+                <h2>Cards</h2>
+                <p>Cards are elements that contain blocks of related information such as pictures, text and calls to action.<br>You can make any container element into a card, this can be achieved using the <code>.card</code> class</p>
+                <div class="test">
+					<div class="grid">
+						<div class="grid__cell phone-1of1 tab-up-1of2 tab-up-center">
+	                        <div class="card">
+	                            <h5><strong>Hello world</strong></h5>
+								<p>Id id laborum excepteur labore adipisicing pariatur sunt incididunt eiusmod consectetur culpa laborum anim adipisicing fugiat non. Cillum quis pariatur velit sint nostrud minim quis. Excepteur amet cillum magna quis non exercitation fugiat sit dolor anim velit aute ullamco sunt cillum nisi eiusmod. Ullamco proident sint voluptate dolore officia duis enim ea excepteur.</p>
+	                        </div>
+						</div>
+					</div>
+                </div>
+                <pre><code>&lt;div class="card"&gt;
+	&lt;h5&gt;&lt;strong&gt;Hello world&lt;/strong&gt;&lt;/h5&gt;
+	&lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <h2>Composite card</h2>
+                <p>Cards can be split in several components in order to better split between different contents and to make content more appealing and coheseve. In Abimis such a card is defined as a composite card and is defined by the <code>.card--composite</code> class which overrides some of the card's styles to make it easier to split its contents into different parts.</p>
+                <div class="test">
+					<div class="grid padding-bottom--small">
+						<div class="grid__cell phone-up-1of1 tab-up-1of2 tab-up-center">
+	                        <div class="card card--composite">
+	                            <div class="card__nav card__nav--large card__nav--dark">
+									<div class="card__nav__title">
+										Sample Card
+									</div>
+									<i class="icon-times"></i>
+	                            </div>
+								<div class="card__header card__header--horizontal">
+									<img src="https://placehold.it/48x48" alt="placeholder" class="margin-right--small" style="border-radius:50%">
+									<div>
+										<strong>Hello Card</strong>
+										<div>Subtitle</div>
+									</div>
+								</div>
+								<div class="card__body">
+									<p>Sint ad eiusmod occaecat voluptate laboris velit duis ex mollit consectetur sit. Officia consectetur ipsum occaecat non eu culpa esse labore minim voluptate aute amet. Culpa veniam cupidatat commodo tempor exercitation cupidatat aute.</p>
+								</div>
+								<hr class="card__divider">
+								<div class="card__actions card__actions--right">
+									<a class="button button--rounded" href="#">Action 1</a>
+									<a class="button button--rounded" href="#">Action 2</a>
+								</div>
+	                        </div>
+						</div>
+					</div>
+				</div>
+
+                A composite card is made out of four components:
+                <h5>Card Nav</h5>
+                <p>The card Nav is the element which is used when a card needs to provide a top bar that contains easily accessible actions and buttons to navigate in the website or in the app. It is provided in both light and dark themes and in two sizes. It is advised to use at most one small string of text and at most 3 actions to mantain the element's usability at its best.</p>
+                <p>The card's nav has to be inside a composite card and is defined by the element class <code>.card__nav</code>. The default card nav is the small nav with the dark text. To change the size you can use the <code>.card__nav--big</code> modifier. The text color can be changed into white text by using the <code>.card__nav--dark</code> modifier.</p>
+
+                <div class="test">
+					<div class="grid padding-bottom--small">
+						<div class="grid__cell phone-up-1of1 tab-up-1of2">
+	                        <div class="card card--composite">
+	                            <div class="card__nav card__nav--large card__nav--dark">
+									<div class="card__nav__title">
+										Big nav
+									</div>
+									<i class="icon-times"></i>
+	                            </div>
+								<div class="card__body">
+									<p>Sint ad eiusmod occaecat voluptate laboris velit duis ex mollit consectetur sit.</p>
+								</div>
+	                        </div>
+						</div>
+						<div class="grid__cell phone-up-1of1 tab-up-1of2">
+	                        <div class="card card--composite">
+	                            <div class="card__nav">
+									<div class="card__nav__title">
+										Small nav
+									</div>
+									<i class="icon-times"></i>
+	                            </div>
+								<div class="card__body">
+									<p>Sint ad eiusmod occaecat voluptate laboris velit duis ex mollit consectetur sit. Sint ad eiusmod occaecat voluptate.</p>
+								</div>
+	                        </div>
+						</div>
+					</div>
+				</div>
+
+                <h5>Card Header</h5>
+                <p>When a card need to have a distinct header it's possible to use the card header element to have good separation between the contents, the header is great when it comes to providing information that will be needed to understand the context of the rest of the card such as titles, profile pictures and such content.</p>
+                <p>To use the card header add the <code>.card__header</code> element class to an element inside a composite card. If a horizontally flowing header is needed use <code>.card__header--horizontal</code> modifier.</p>
+
+                <div class="test">
+					<div class="grid">
+						<div class="grid__cell global-1of2">
+							<div class="card card--composite">
+								<div class="card__header">
+									<strong>Basic header</strong>
+									<div>This is just another header</div>
+								</div>
+								<div class="card__body">
+									<p>Ut ad nulla eu qui minim dolor deserunt proident do qui Lorem sint sunt eu est voluptate dolore. Ea amet excepteur eu eu labore occaecat ut duis elit commodo do dolore incididunt exercitation aute velit anim. Velit labore voluptate sunt aute ipsum nulla est quis. Et adipisicing voluptate.</p>
+								</div>
+							</div>
+						</div>
+						<div class="grid__cell global-1of2">
+							<div class="card card--composite">
+								<div class="card__header card__header--horizontal">
+									<img src="https://placehold.it/48x48" alt="placeholder" class="margin-right--small" style="border-radius:50%">
+									<strong>Horizontally flowing header</strong>
+								</div>
+								<div class="card__body">
+									<p>Ut ad nulla eu qui minim dolor deserunt proident do qui Lorem sint sunt eu est voluptate dolore. Ea amet excepteur eu eu labore occaecat ut duis elit commodo do dolore incididunt exercitation aute velit anim. Velit labore voluptate sunt aute ipsum nulla est quis. Et adipisicing voluptate.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <h5>Card Body</h5>
+                <p>The card body is the most basic component in the whole composite card element, it is used to provide continuity with the rest of the card giving an easy to use container that has the same spacing as the rest of the components, it is ideal to contain text and small pictures. It is accessible through the <code>.card__body</code> element class.</p>
+
+                <div class="test">
+					<div class="grid">
+						<div class="grid__cell phone-up-1of1 tab-up-1of2 tab-up-center">
+							<div class="card card--composite">
+								<div class="card__body">
+									<h5><strong>Card body</strong></h5>
+									<p>Ut ad nulla eu qui minim dolor deserunt proident do qui Lorem sint sunt eu est voluptate dolore. Ea amet excepteur eu eu labore occaecat ut duis elit commodo do dolore incididunt exercitation aute velit anim. Velit labore voluptate sunt aute ipsum nulla est quis. Et adipisicing voluptate.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <h5>Card Actions</h5>
+                <p>When a card needs to have some buttons and calls to action it is ideal to provide them as the last element in the card's flow, to do so it is advided to use the <code>card__actions</code> element class which provides a great container for all your actions. It is also possible to choose weather you want them floated to the left or the right, the default setting provides left alignment of the actions while to have them floated to the right it is possible to use the <code>.card__actions--right</code> modifier.</p>
+                <p>It is a best practice to have at most two buttons or three icon buttons as your actions for each card in order to not overwhelm the user.</p>
+
+                <div class="test">
+					<div class="grid">
+						<div class="grid__cell global-1of2">
+							<div class="card card--composite">
+								<div class="card__body">
+									<p>The card actions are great to provide actions that make sense in the context of your card, just like these!</p>
+								</div>
+								<div class="card__actions">
+									<a class="button button--rounded button--hollow margin-sides--tiny">Agree</a>
+									<a class="button button--rounded button--hollow button--warning margin-sides--tiny">Disagree</a>
+								</div>
+							</div>
+						</div>
+						<div class="grid__cell global-1of2">
+							<div class="card card--composite">
+								<div class="card__body">
+									<p>The right floated actions are fantastic too, they look great in many occasions and are so easy to obtain with just a modifier to obtain them!</p>
+								</div>
+								<div class="card__actions card__actions--right">
+									<a class="button button--rounded button--hollow margin-sides--tiny">Agree</a>
+									<a class="button button--rounded button--hollow button--warning margin-sides--tiny">Disagree</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <h2>Default Cards</h2>
+                <p>The default style of the Abimis webkit follows Google's Material Design Guidelines giving it a personal flavour.</p>
+                <h5>Elevation</h5>
+                <p>Cards can receve different elevation levels using the <code>.card--elevation-{elevation-level}</code> modifiers. These modifiers change the card shadow to give the illusion of depth to the user.</p>
+
+                <div class="test">
+					<div class="grid">
+						<div class="grid__cell global-1of5">
+							<div class="margin-bottom--bigger card card--elevation-1 flex-v-align-content">
+								<h2 class="margin-none"><strong>1</strong></h2>
+							</div>
+						</div>
+						<div class="grid__cell global-1of5">
+							<div class="margin-bottom--bigger card card--elevation-2 flex-v-align-content">
+								<h2 class="margin-none"><strong>2</strong></h2>
+							</div>
+						</div>
+						<div class="grid__cell global-1of5">
+							<div class="margin-bottom--bigger card card--elevation-3 flex-v-align-content">
+								<h2 class="margin-none"><strong>3</strong></h2>
+							</div>
+						</div>
+						<div class="grid__cell global-1of5">
+							<div class="margin-bottom--bigger card card--elevation-4 flex-v-align-content">
+								<h2 class="margin-none"><strong>4</strong></h2>
+							</div>
+						</div>
+						<div class="grid__cell global-1of5">
+							<div class="margin-bottom--bigger card card--elevation-5 flex-v-align-content">
+								<h2 class="margin-none"><strong>5</strong></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <h5>Themes</h5>
+                <p>Abimis material cards come with two themes: dark and light. As of default cards use the light theme, to use the dark theme use the <code>.card--dark</code> modifier.</p>
+
+                <div class="test">
+					<div class="grid">
+						<div class="grid__cell global-1of2">
+							<div class="card card--dark">
+								Hello from the <span class="color--danger">Dark Side.
+							</span></div>
+						</div>
+						<div class="grid__cell global-1of2">
+							<div class="card">
+								Hello from the <span class="color--secondary">Light Side</span>.
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <h5>Spacing</h5>
+                <p>The cards have a slightly larger padding on the bottom but sometimes you'd want to have a regularly padded card or one with no padding at all. This can be achieved with the <code>.card--balanced</code> and <code>.card--borderless</code> modifiers.</p>
+
+                <div class="test">
+					<div class="grid text-align--center">
+						<div class="grid__cell global-1of3">
+							<p><strong>Default card</strong></p>
+							<div class="card">
+								<div class="content">Content</div>
+							</div>
+						</div>
+						<div class="grid__cell global-1of3">
+							<p><strong>Balanced card</strong></p>
+							<div class="card card--balanced">
+								<div class="content">Content</div>
+							</div>
+						</div>
+						<div class="grid__cell global-1of3">
+							<p><strong>Borderless card</strong></p>
+							<div class="card card--borderless">
+								<div class="content">Content</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <h5>Overflow</h5>
+                <p>As of default cards don't allow overflow and therefore hide any piece of content that gets out of it's boundaries. If an overflow management is needed you can either use the <code>.card--overflow</code> modifier to let the browser decide on the policy to use to manage the overflow or you can use the <code>.card--show-overflow</code> to give a visible proprety to your cards overflow.</p>
+
+                <div class="test">
+					<div class="grid text-align--center padding-bottom">
+						<div class="grid__cell global-1of3">
+							<p><strong>Default card</strong></p>
+							<div class="card">
+								<div class="content" style="position:absolute; width:80%; ">Content</div>
+							</div>
+						</div>
+						<div class="grid__cell global-1of3">
+							<p><strong>Auto overflow card</strong></p>
+							<div class="card card--overflow">
+								<div class="content" style="position:absolute; width:80%; ">Content</div>
+							</div>
+						</div>
+						<div class="grid__cell global-1of3">
+							<p><strong>Visible overflow card</strong></p>
+							<div class="card card--show-overflow">
+								<div class="content" style="position:absolute; width:80%; ">Content</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT VARI -->
+    <script src="https://use.fontawesome.com/ae65826f22.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
