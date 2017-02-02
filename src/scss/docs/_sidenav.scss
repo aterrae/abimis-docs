@@ -3,20 +3,26 @@
     background: $white;
 
     &__container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding-top: $topnav-height;
-        border-right: 1px solid $smoke;
-        z-index: 0;
-        height: 100%;
-        overflow: scroll;
+        @include media-query(lap-up) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: $topnav-height;
+            border-right: 1px solid $smoke;
+            z-index: 0;
+            height: 100%;
+            overflow: scroll;
+        }
     }
 
     &__list {
         list-style: none;
         padding: 0;
         color: $smoke;
+
+        a {
+            color: $smoke;
+        }
     }
 
     &__title {
@@ -32,8 +38,20 @@
     }
 
     &__item {
+
         &--active {
-            text-decoration: underline;
+            position: relative;
+
+            a {
+                color: $carbon;
+            }
+
+            &::before {
+                content: '•';
+                color: $primary-color;
+                position: absolute;
+                left: -16px;
+            }
         }
     }
 }

@@ -2,7 +2,16 @@
     "projectName":"Abimis by Aterrae",
     "topics": [
       {
-        "title": "Foundations",
+        "title": "About Abimis",
+        "items": [
+          {
+            "name": "Introduction",
+            "page": "introduction"
+          }
+        ]
+      },
+      {
+        "title": "Basics",
         "items": [
           {
             "name": "Grid",

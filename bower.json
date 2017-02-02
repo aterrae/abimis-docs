@@ -29,6 +29,7 @@
     "tests"
   ],
   "dependencies": {
-    "abimis-webkit": "^0.1.0"
+    "abimis-webkit": "^0.1.0",
+    "highlightjs": "^9.9.0"
   }
 }

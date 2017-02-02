@@ -14,6 +14,7 @@ PATHS:
   # Here is the part where you can set the paths for Handlebars
   pages:
     - "./src/pages/*.html"
+    - "./src/pages/*.md"
   partials:
     - "./src/partials/**/*.hbs"
   helpers:
@@ -35,6 +36,7 @@ PATHS:
   jsLibsSource:
     # Some library that we need to let you experiment with our ABIMIS js
     - "bower_components/jquery/dist/jquery.js"
+    - "bower_components/highlightjs/highlight.pack.min.js"
     # Our amazing ABIMIS file that let you making amazing tricks
     - "bower_components/abimis-webkit/js/abimis.min.js"
   jsLibsResName:

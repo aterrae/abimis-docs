@@ -1,13 +1,16 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import ContainerName from './containers/ContainerName';
+import Index from './containers/index.jsx';
+import Docs from './containers/docs.jsx';
 
-export default function getRoutes(store) {
+export default function getRoutes() {
     return (
         <Route path="/">
-            <IndexRoute component={ContainerName} />
-            <Route path="pathName" component={ContainerName} />
+            <IndexRoute component={Index}/>
+            <Route path="docs" component={Docs}/>
+            <Route path="docs/*" component={Docs}/>
+            <Route path="*" component={Docs}/>
         </Route>
     )
 }

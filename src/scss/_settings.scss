@@ -34,9 +34,9 @@ $smoke:                         #999999;
 $fog:                           #d8d8d8;
 $white:                         #ffffff;
 
-$primary-color:                 #00C26E;
-$secondary-color:               #169CEE;
-$warning-color:                 #F5A623;
+$primary-color:                 #59E0B3;
+$secondary-color:               #F2B5B5;
+$warning-color:                 #F27C54;
 $danger-color:                  #e74c3c;
 $success-color:                 #B8E986;
 $info-color:                    $white;
@@ -52,7 +52,7 @@ $heading-tiny:                  1.5rem;
 
 //Sizes
 
-$button-height:                 36px;
+$button-height:                 48px;
 $button-padding:                0 24px;
 $button-radius:                 6px;
 $field-height:                  40px;
@@ -60,8 +60,8 @@ $field-padding:                 0 20px;
 $field-radius:                  6px;
 $field-background:              rgba(255,255,255,0.2);
 
-$topnav-height:                 64px;
-$topnav-logo-padding:           8px;
+$topnav-height:                 96px;
+$topnav-logo-padding:           16px;
 $topnav-logo-height:            $topnav-height - ($topnav-logo-padding * 2);
 $topnav-color:                  $primary-color;
 $topnav-text-color:             $white;
