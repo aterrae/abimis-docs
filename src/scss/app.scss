@@ -8,6 +8,8 @@
 @import 'docs/test';
 @import 'docs/missing';
 
+@import 'sections/changelog';
+
 body {
     font-family: Roboto;
 }
@@ -30,5 +32,22 @@ body {
             font-weight: 700;
             color: $white;
         }
+    }
+}
+
+.home__footer {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    color: $white;
+
+    span {
+        margin: 0 16px;
+    }
+
+    a {
+        color: $white;
     }
 }

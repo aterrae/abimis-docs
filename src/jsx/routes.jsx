@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import Index from './containers/index.jsx';
-import Docs from './containers/docs.jsx';
+import Index from './containers/index';
+import Docs from './containers/docs';
 
 export default function getRoutes() {
     return (
