@@ -1,0 +1,92 @@
+{
+  "PORT": 8000,
+  "COMPATIBILITY": {
+    "browsers": [
+      "last 2 versions",
+      "ie >= 10"
+    ],
+    "ignore": [
+      "rem"
+    ],
+    "ignoreFiles": [
+      "**/_animate-settings.scss"
+    ]
+  },
+  "HTML": {
+    "sourcePath": [
+      "src/{pages,partials,data,helpers}/**/*"
+    ],
+    "pages": [
+      "src/pages/*.html",
+      "src/pages/*.md"
+    ],
+    "partials": [
+      "src/partials/**/*.hbs"
+    ],
+    "data": [
+      "src/data/**/*.json"
+    ],
+    "helpers": [
+      "src/helpers/*.js"
+    ],
+    "destPath": "dist"
+  },
+  "SASS": {
+    "sourcePath": [
+      "src/scss/**/*.scss"
+    ],
+    "libPaths": [
+      "bower_components/abimis-webkit/scss",
+      "bower_components/animate-sass"
+    ],
+    "destPath": "dist/css"
+  },
+  "JSLIBS": {
+    "sourceFiles": [
+      "bower_components/jquery/dist/jquery.js",
+      "bower_components/abimis-webkit/js/abimis.min.js"
+    ],
+    "destFile": "libs.js",
+    "destPath": "dist/js"
+  },
+  "JSAPP": {
+    "sourceFile": "src/js/app.js",
+    "destFile": "app.js",
+    "destPath": "dist/js"
+  },
+  "ASSETS": {
+    "sourcePath": [
+      "src/assets/**/*",
+      "!src/assets/img",
+      "!src/assets/img/**"
+    ],
+    "destPath": "dist/assets",
+    "imagesSourcePath": [
+      "src/assets/img/**/*"
+    ],
+    "imagesDestPath": "dist/assets/img"
+  },
+  "HUMANS": {
+    "team": [
+      "Your title: This website was developed using Abimis Framework",
+      "Site: abimis.aterrae.com",
+      "Twitter: @aterraeofficial",
+      "Location: Rubano (Padova), Italy"
+    ],
+    "thanks": [
+      "Aterrae | Digital Growth (https://aterrae.com)"
+    ],
+    "site": [
+      "Last update: 2017/02/16",
+      "Standards: HTML5, CSS3, ES6",
+      "Components: SASS, Animation-SASS, jQuery, React, GSAP",
+      "Software: Atom"
+    ],
+    "note": "Made with plenty of ❤️ by two guys from the Aterrae team in Rubano (Padova), Italy"
+  },
+  "ROBOTS": {
+    "useragent": "*",
+    "allow": [],
+    "disallow": []
+  }
+}

@@ -1,10 +1,10 @@
 {
   "name": "abimis",
-  "version": "0.1.0",
-  "description": "Abimis is a framework made by the Aterrae team for the modern front-end development of wonderful websites and mezmerizing web applications that really matter https://abimis.aterrae.com",
+  "version": "0.4.1",
+  "description": "Abimis is a sleek and performant framework made for the modern front-end developer",
   "main": [
-    "gulpfile.babel.js"
-
+    "src/scss/app.scss",
+    "src/js/app.js"
   ],
   "moduleType": [],
   "keywords": [
@@ -29,7 +29,6 @@
     "tests"
   ],
   "dependencies": {
-    "abimis-webkit": "^0.1.0",
-    "highlightjs": "^9.9.0"
+    "abimis-webkit": "^0.1.1"
   }
 }

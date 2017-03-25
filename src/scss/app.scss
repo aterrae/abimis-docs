@@ -2,13 +2,16 @@
 
 @import 'settings';
 @import 'abimis';
+// These files are used by Animate-SASS
+@import 'animate-settings';
+@import 'animate';
 
 @import 'docs/sidenav';
 @import 'docs/body';
 @import 'docs/test';
 @import 'docs/missing';
 
-@import 'sections/changelog';
+// @import 'sections/changelog';
 
 body {
     font-family: Roboto;
