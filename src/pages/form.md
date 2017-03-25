@@ -21,4 +21,4 @@ This basic styling also applies to `textarea` and `select`
 |`$field-height`    |44px                 |The default height of a field       |
 |`$field-padding`   |0 20px               |The default padding of a field      |
 |`$field-radius`    |6px                  |The border radius of a field        |
-|`$field-background`|rgba(255,255,255,0.2)|	The background color of a field    |
+|`$field-background`|rgba(255,255,255,0.2)|The background color of a field     |

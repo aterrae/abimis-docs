@@ -13,20 +13,29 @@ class Docs extends Component {
             content: null
         }
 
-        this.renderMD(this.props.match.params.md);
+        this.renderMd(this.props.match.params.md);
     }
 
     componentWillReceiveProps(nextProps) {
-        this.renderMD(nextProps.match.params.md);
+        this.renderMd(nextProps.match.params.md);
     }
 
-    renderMD(currentPath) {
+    renderMd(currentPath) {
         var renderer = new Marked.Renderer({langPrefix: 'lang-'});
         var base = new Marked.Renderer({langPrefix: 'lang-'});
 
-        renderer.code = (code, lang, escaped) => lang == 'test' ? this.example(code) : base.code(code, lang, escaped) + '</div>';
+        renderer.code = (code, lang) => {
+            if (lang == 'test') {
+                return this.example(code);
+            } else {
+                console.log(renderer.html());
+                return base.code(code, lang);
+            }
+        }
 
-        $.get('../'+ currentPath +'.md').then(content => {
+        let mdPath = currentPath == 'introduction' ? 'https://raw.githubusercontent.com/aterrae/abimis/master/README.md' : '../'+ currentPath +'.md';
+
+        $.get(mdPath).then(content => {
             this.setState({
                 page: currentPath,
                 content: Marked(content, {renderer})
