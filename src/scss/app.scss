@@ -6,6 +6,7 @@
 @import 'animate-settings';
 @import 'animate';
 
+@import 'docs/list';
 @import 'docs/sidenav';
 @import 'docs/body';
 @import 'docs/test';
@@ -14,7 +15,7 @@
 // @import 'sections/changelog';
 
 body {
-    font-family: Roboto;
+    font-family: Open Sans;
 }
 
 > h1 {

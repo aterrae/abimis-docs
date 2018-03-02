@@ -1,0 +1,42 @@
+.icon-list {
+    li {
+        display: inline-flex;
+        align-items: stretch;
+        padding: 16px 16px 16px 0px;
+        box-sizing: border-box;
+        transition: .1s;
+
+        figure {
+            margin: 0;
+            min-width: 64px;
+            min-height: 64px;
+            padding: 12px 16px;
+            text-align: center;
+            color: $coal;
+
+            i {
+                font-size: 4rem;
+            }
+        }
+
+        div {
+            align-self: flex-start;
+            color: $carbon;
+
+            h5 {
+                margin-bottom: 4px;
+                font-family: Montserrat;
+                font-weight: 600;
+                color: $coal;
+            }
+        }
+
+        &:hover {
+            background: lighten($fog, 10%);
+            border-radius: 8px;
+
+            i { color: $primary-color; }
+            h5 { text-decoration: underline; }
+        }
+    }
+}
