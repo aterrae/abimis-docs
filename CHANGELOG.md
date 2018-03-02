@@ -1,5 +1,62 @@
 # Changelog
 
+## v0.7.0 (October 27, 2017)
+
+### Updated
+
+- Abimis now supports multiple projects
+- Dependencies
+
+## v0.6.0 (June 26, 2017)
+
+### Added
+
+- CSScomb is now supported with custom settings
+
+### Updated
+
+- Moved from Browserify to Webpack
+- Moved from Gulp-HB to Iungo
+- Unified all error tasks into a single one
+- Get task now also supports abimis_components
+
+### Removed
+
+- Moved away from libs.js and app.js files in favour of a single JS file
+
+## v0.5.1 (June 9, 2017)
+
+### Added
+
+- Server Redux task
+
+### Updated
+
+- NODE_ENV now manages both development and production states
+- NODE_ENV variable now flows down through Browserify
+- Get task now also supports devDependencies installation
+
+### Removed
+
+- Unused dependency
+
+## v0.5.0 (April 25, 2017)
+
+### Added
+
+- Meow! Yarn joined the party =^•ω•^=
+- Get uses Yarn when possible
+- Get shell commands now support Windows
+
+### Updated
+
+- Moved CSSnano from Gulp to postCSS plugin
+- Moved TXT settings to a dedicated file
+
+### Removed
+
+- It's time for us to part ways. Let us know how your life is going without us. We've loved you little Bower
+
 ## v0.4.1 (March 25, 2017)
 
 ### Fixed

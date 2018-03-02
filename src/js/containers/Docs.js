@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Marked from 'marked';
+import $ from 'jquery';
 
 import Nav from '../components/Topnav';
 import Sidenav from '../components/Sidenav';
@@ -28,12 +29,11 @@ class Docs extends Component {
             if (lang == 'test') {
                 return this.example(code);
             } else {
-                console.log(renderer.html());
                 return base.code(code, lang);
             }
         }
 
-        let mdPath = currentPath == 'introduction' ? 'https://raw.githubusercontent.com/aterrae/abimis/master/README.md' : '../'+ currentPath +'.md';
+        let mdPath = currentPath == 'introduction' ? 'https://raw.githubusercontent.com/aterrae/abimis/master/README.md' : '../assets/docs/'+ currentPath +'.md';
 
         $.get(mdPath).then(content => {
             this.setState({

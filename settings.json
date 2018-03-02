@@ -1,33 +1,58 @@
 {
   "PORT": 8000,
   "COMPATIBILITY": {
-    "browsers": [
-      "last 2 versions",
-      "ie >= 10"
-    ],
-    "ignore": [
-      "rem"
-    ],
-    "ignoreFiles": [
-      "**/_animate-settings.scss"
-    ]
+    "css": {
+      "browsers": [
+        "last 2 versions",
+        "ie >= 10"
+      ],
+      "ignore": [
+        "rem"
+      ],
+      "ignoreFiles": [
+        "**/_animate-settings.scss"
+      ]
+    },
+    "js": {
+      "babelrc": false,
+      "cacheDirectory": true,
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": [
+                "last 2 versions",
+                "ie >= 10"
+              ],
+              "node": "current"
+            },
+            "modules": false
+          }
+        ],
+        "react"
+      ],
+      "plugins": [
+        "transform-object-assign"
+      ]
+    }
   },
+  "ROOT": "src",
   "HTML": {
     "sourcePath": [
       "src/{pages,partials,data,helpers}/**/*"
     ],
     "pages": [
-      "src/pages/*.html",
-      "src/pages/*.md"
+      "src/pages/*.html"
     ],
     "partials": [
-      "src/partials/**/*.hbs"
+      "src/partials"
     ],
     "data": [
-      "src/data/**/*.json"
+      "src/data"
     ],
     "helpers": [
-      "src/helpers/*.js"
+      "src/helpers"
     ],
     "destPath": "dist"
   },
@@ -35,23 +60,15 @@
     "sourcePath": [
       "src/scss/**/*.scss"
     ],
-    "libPaths": [
-      "bower_components/abimis-webkit/scss",
-      "bower_components/animate-sass"
+    "libPath": [
+      "node_modules/abimis-webkit/scss",
+      "node_modules/animate-sass"
     ],
     "destPath": "dist/css"
   },
-  "JSLIBS": {
-    "sourceFiles": [
-      "bower_components/jquery/dist/jquery.js",
-      "bower_components/abimis-webkit/js/abimis.min.js"
-    ],
-    "destFile": "libs.js",
-    "destPath": "dist/js"
-  },
-  "JSAPP": {
+  "JAVASCRIPT": {
     "sourceFile": "src/js/app.js",
-    "destFile": "app.js",
+    "libPath": [],
     "destPath": "dist/js"
   },
   "ASSETS": {
@@ -65,28 +82,5 @@
       "src/assets/img/**/*"
     ],
     "imagesDestPath": "dist/assets/img"
-  },
-  "HUMANS": {
-    "team": [
-      "Your title: This website was developed using Abimis Framework",
-      "Site: abimis.aterrae.com",
-      "Twitter: @aterraeofficial",
-      "Location: Rubano (Padova), Italy"
-    ],
-    "thanks": [
-      "Aterrae | Digital Growth (https://aterrae.com)"
-    ],
-    "site": [
-      "Last update: 2017/02/16",
-      "Standards: HTML5, CSS3, ES6",
-      "Components: SASS, Animation-SASS, jQuery, React, GSAP",
-      "Software: Atom"
-    ],
-    "note": "Made with plenty of ❤️ by two guys from the Aterrae team in Rubano (Padova), Italy"
-  },
-  "ROBOTS": {
-    "useragent": "*",
-    "allow": [],
-    "disallow": []
   }
 }

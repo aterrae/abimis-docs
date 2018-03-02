@@ -1,13 +1,12 @@
 import gulp from 'gulp';
-import { COMPATIBILITY, SASS } from '../settings';
 import postcss from 'gulp-postcss';
 import syntax from 'postcss-scss';
 import autoprefixer from 'autoprefixer';
 import doiuse from 'doiuse';
+import cssnano from 'cssnano';
 import sourcemaps from 'gulp-sourcemaps';
 import compileSass from 'gulp-sass';
-import errorSass from './error-sass';
-import cssnano from 'gulp-cssnano';
+import errorNotify from './error-notify';
 import browser from 'browser-sync';
 
 // This SASS function:
@@ -15,15 +14,18 @@ import browser from 'browser-sync';
 // Adds CSS prefixes where necessary
 // Generates the sourcemaps
 export function sass() {
-    let plugin = [
-        autoprefixer({ browsers: COMPATIBILITY.browsers })
+    const COMPATIBILITY = require('../' + process.env.PROJECT).COMPATIBILITY;
+    const SASS = require('../' + process.env.PROJECT).SASS;
+
+    let plugins = [
+        autoprefixer({ browsers: COMPATIBILITY.css.browsers })
     ]
     return gulp.src(SASS.sourcePath)
         .pipe(sourcemaps.init())
-        .pipe(compileSass({ includePaths: SASS.libPaths })
-        .on('error', errorSass)
+        .pipe(compileSass({ includePaths: SASS.libPath })
+        .on('error', errorNotify)
         .on('error', compileSass.logError))
-        .pipe(postcss(plugin))
+        .pipe(postcss(plugins))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(SASS.destPath))
         .pipe(browser.reload({ stream: true }));
@@ -32,34 +34,37 @@ export function sass() {
 // This SASSCHECK function:
 // Detects browser support using the caniuse database
 export function sassCheck() {
-    let plugin = [
+    const COMPATIBILITY = require('../' + process.env.PROJECT).COMPATIBILITY;
+    const SASS = require('../' + process.env.PROJECT).SASS;
+
+    let plugins = [
         doiuse({
-            browsers: COMPATIBILITY.browsers,
-            ignore: COMPATIBILITY.ignore,
-            ignoreFiles: COMPATIBILITY.ignoreFiles,
-            onFeatureUsage: function (usageInfo) {
-                console.log(usageInfo.message)
-            }
+            browsers: COMPATIBILITY.css.browsers,
+            ignore: COMPATIBILITY.css.ignore,
+            ignoreFiles: COMPATIBILITY.css.ignoreFiles
         })
     ]
     return gulp.src(SASS.sourcePath)
-        .pipe(postcss(plugin, { syntax: syntax }))
+        .pipe(postcss(plugins, { syntax: syntax }));
 }
 
 // This SASSDIST function:
-// Adds CSS prefixes where necessary
 // Compiles the SASS files
+// Adds CSS prefixes where necessary
 // Minifies the resulting CSS
 export function sassDist() {
-    let plugin = [
-        autoprefixer({ browsers: COMPATIBILITY.browsers })
+    const COMPATIBILITY = require('../' + process.env.PROJECT).COMPATIBILITY;
+    const SASS = require('../' + process.env.PROJECT).SASS;
+
+    let plugins = [
+        cssnano(),
+        autoprefixer({ browsers: COMPATIBILITY.css.browsers })
     ]
     return gulp.src(SASS.sourcePath)
-        .pipe(postcss(plugin, { syntax: syntax }))
-        .pipe(compileSass({ includePaths: SASS.libPaths })
-        .on('error', errorSass)
+        .pipe(compileSass({ includePaths: SASS.libPath })
+        .on('error', errorNotify)
         .on('error', compileSass.logError))
-        .pipe(cssnano())
+        .pipe(postcss(plugins))
         .pipe(gulp.dest(SASS.destPath))
         .pipe(browser.reload({ stream: true }));
 }
