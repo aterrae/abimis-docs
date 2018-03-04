@@ -5,3 +5,118 @@
     border: 1px solid $fog;
     margin-bottom: 48px;
 }
+
+
+// Test Code here, do not commit
+
+$nav-height: 64px;
+$nav-background: $primary-color;
+$nav-text-color: $white;
+
+$nav-logo-padding: 12px;
+
+.navbar {
+    display: flex;
+    align-items: stretch;
+    height: $nav-height;
+    background: $nav-background;
+    color: $nav-text-color;
+
+    a {
+        cursor: pointer;
+    }
+
+    &__logo {
+        margin-right: 32px;
+        padding-right: 16px;
+
+        figure {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            height: 100%;
+
+            img, svg {
+                max-height: $nav-height - $nav-logo-padding * 2;
+                padding: 0 $nav-logo-padding;
+                display: block;
+            }
+
+            figcaption {
+                color: $nav-text-color;
+            }
+        }
+
+        &:hover {
+            background: darken($nav-background, 6%);
+        }
+    }
+
+    &__left, &__right, &__burger {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 100%;
+            line-height: $nav-height;
+        }
+    }
+
+    &__left, &__right {
+        display: none;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 100%;
+            line-height: $nav-height;
+
+            li {
+                display: inline-block;
+                height: 100%;
+                padding: 0 16px;
+                color: $white;
+
+                &:hover {
+                    background: darken($nav-background, 6%);
+                }
+            }
+        }
+
+        @include media-query(lap-up) {
+            display: block;
+        };
+    }
+
+    &__left {
+    }
+
+    &__right {
+        margin-left: auto;
+    }
+
+    &__burger {
+        margin-left: auto;
+        cursor: pointer;
+        display: block;
+
+        img, svg {
+            display: block;
+            padding: $nav-logo-padding * 1.5;
+            max-height: $nav-height - $nav-logo-padding * 3;
+        }
+
+        @include media-query(lap-up) {
+            display: none;
+        };
+    }
+
+    &--active {
+        .navbar {
+            &__left, &__right {
+                display: block;
+            }
+        }
+    }
+}

@@ -59,11 +59,8 @@ class Playground extends Component {
 
         const renderComponent = (component) => {
             switch (component) {
-                case "navbar":
-                    <Navbar/>
-                    break;
-                default:
-
+                case "navbar":  return <Navbar/>
+                default:        return null;
             }
         }
 
@@ -71,7 +68,10 @@ class Playground extends Component {
             <div>
                 <Nav/>
                 <PlaygroundNav currentPath={this.props.match.params.component}/>
-                {this.props.match.params.component ? renderComponent(this.props.match.params.component) : <Menu/>}
+                <div className="grid grid--constrained">
+                    <h2>{this.props.match.params.component}</h2>
+                    {this.props.match.params.component ? renderComponent(this.props.match.params.component) : <Menu/>}
+                </div>
             </div>
         )
     }
