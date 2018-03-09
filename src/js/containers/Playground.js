@@ -48,7 +48,7 @@ class Playground extends Component {
             ]
 
             return (
-                <ul className="icon-list grid-list grid-list--S-2 grid-list--M-2 grid-list--L-3 grid-list--limited">
+                <ul className="icon-list grid-list grid-list--S-1 grid-list--M-2 grid-list--L-3 grid-list--limited">
                     {COMPONENTS.map((component, index) => <MenuItem key={"menu-item-" + index}
                                                                     component={component.link}
                                                                     title={component.title}
@@ -70,7 +70,7 @@ class Playground extends Component {
             <div>
                 <Nav/>
                 <PlaygroundNav currentPath={this.props.match.params.component}/>
-                <div className="grid grid--constrained">
+                <div className="grid grid--constrained grid--overflow-visible">
                     <div className="playground">
                         <h2>{this.props.match.params.component}</h2>
                         {this.props.match.params.component ? renderComponent(this.props.match.params.component) : <Menu/>}
