@@ -7,6 +7,7 @@ import Sidenav from '../components/Sidenav';
 import PlaygroundNav from '../components/Playground.Nav';
 
 import Navbar from '../components/demos/Navbar';
+import GridVisibility from '../components/demos/GridVisibility';
 
 class Playground extends Component {
     constructor(props) {
@@ -39,10 +40,10 @@ class Playground extends Component {
                     desc: "A seamless component to give your user a fixed place to go to when seeking an easy and intuitive way to move around"
                 },
                 {
-                    link: "sidenav",
-                    title: "Sidenav",
+                    link: "grid-visibility",
+                    title: "Grid Visibility",
                     icon: "ship",
-                    desc: "A seamless component to give your user a fixed place to go to when seeking an easy and intuitive way to move around"
+                    desc: "A set of classes to manage the visibility of items in a set of grids"
                 },
             ]
 
@@ -60,6 +61,7 @@ class Playground extends Component {
         const renderComponent = (component) => {
             switch (component) {
                 case "navbar":  return <Navbar/>
+                case "grid-visibility":  return <GridVisibility/>
                 default:        return null;
             }
         }
@@ -69,8 +71,10 @@ class Playground extends Component {
                 <Nav/>
                 <PlaygroundNav currentPath={this.props.match.params.component}/>
                 <div className="grid grid--constrained">
-                    <h2>{this.props.match.params.component}</h2>
-                    {this.props.match.params.component ? renderComponent(this.props.match.params.component) : <Menu/>}
+                    <div className="playground">
+                        <h2>{this.props.match.params.component}</h2>
+                        {this.props.match.params.component ? renderComponent(this.props.match.params.component) : <Menu/>}
+                    </div>
                 </div>
             </div>
         )

@@ -1,0 +1,33 @@
+@mixin grid-visibility-setup($name: "global-") {
+    .#{$name}show      { display: block; }
+    .#{$name}hide      { display: none; }
+}
+
+@include grid-visibility-setup();
+@include media-query(phone-S) { @include grid-visibility-setup("phone-S-"); }
+@include media-query(phone-M) { @include grid-visibility-setup("phone-M-"); }
+@include media-query(phone-L) { @include grid-visibility-setup("phone-L-"); }
+@include media-query(tab-S) { @include grid-visibility-setup("tab-S-"); }
+@include media-query(tab-M) { @include grid-visibility-setup("tab-M-"); }
+@include media-query(tab-L) { @include grid-visibility-setup("tab-L-"); }
+@include media-query(tab-XL) { @include grid-visibility-setup("tab-XL-"); }
+@include media-query(desk-S) { @include grid-visibility-setup("desk-S-"); }
+@include media-query(desk-M) { @include grid-visibility-setup("desk-M-"); }
+@include media-query(desk-L) { @include grid-visibility-setup("desk-L-"); }
+@include media-query(desk-XL) { @include grid-visibility-setup("desk-XL-"); }
+@include media-query(tv) { @include grid-visibility-setup("tv-"); }
+
+@include media-query(phone) { @include grid-visibility-setup("phone-"); }
+@include media-query(phone-up) { @include grid-visibility-setup("phone-up-"); }
+@include media-query(phablet) { @include grid-visibility-setup("phablet-"); }
+@include media-query(phablet-up) { @include grid-visibility-setup("phablet-up-"); }
+@include media-query(phablet-down) { @include grid-visibility-setup("phablet-down-"); }
+@include media-query(tab) { @include grid-visibility-setup("tab-"); }
+@include media-query(tab-up) { @include grid-visibility-setup("tab-up-"); }
+@include media-query(tab-down) { @include grid-visibility-setup("tab-down-"); }
+@include media-query(lap) { @include grid-visibility-setup("lap-"); }
+@include media-query(lap-up) { @include grid-visibility-setup("lap-up-"); }
+@include media-query(lap-down) { @include grid-visibility-setup("lap-down-"); }
+@include media-query(desk) { @include grid-visibility-setup("desk-"); }
+@include media-query(desk-down) { @include grid-visibility-setup("desk-down-"); }
+@include media-query(desk-wide) { @include grid-visibility-setup("desk-wide-"); }
